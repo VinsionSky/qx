@@ -4,7 +4,7 @@
     "task": [
 		{
 			"config": "1 0 * * * https:\/\/raw.githubusercontent.com\/chavyleung\/scripts\/master\/fandeng\/fandeng.js, tag=樊登读书, enabled=true, img-url=https:\/\/raw.githubusercontent.com\/0x01-0xff\/ProxyProfiles\/master\/QuantumultX\/icon\/task\/FanDeng.png",
-			"addons": "^https:\/\/api\.dushu365\.com\/CheckIn url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/fandeng/fandeng.cookie.js"
+			"addons": "^https:\/\/api\.dushu365\.com\/CheckIn url script-request-body https:\/\/raw.githubusercontent.com\/chavyleung\/scripts\/master\/fandeng\/fandeng.cookie.js"
 		},
 		{
 			"config": "3 0 * * * https:\/\/raw.githubusercontent.com\/chavyleung\/scripts\/master\/meituan\/meituan.js, tag=美团APP, enabled=true, img-url=https:\/\/raw.githubusercontent.com\/0x01-0xff\/ProxyProfiles\/master\/QuantumultX\/icon\/task\/MeiTuan.png"
