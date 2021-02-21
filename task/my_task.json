@@ -10,9 +10,6 @@
 		},
 		{
 			"config": "5 0 * * * https:\/\/raw.githubusercontent.com\/chavyleung\/scripts\/master\/mcdd\/mcdd.js, tag=叮咚买菜, enabled=true, img-url=https:\/\/raw.githubusercontent.com\/0x01-0xff\/ProxyProfiles\/master\/QuantumultX\/icon\/task\/DingDongMaiCai.png"
-		},
-		{
-			"addons": "https:\/\/raw.githubusercontent.com\/0x01-0xff\/ProxyProfiles\/master\/QuantumultX\/task\/GC_One.conf"
 		}
 	]
 }
