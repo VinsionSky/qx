@@ -6,25 +6,23 @@ const watering_urlKey = 'fhyxz_watering_url'
 const KEY_getInfo_url = 'fhyxz_getInfo_url'
 const KEY_getInfo_header = 'fhyxz_getInfo_header'
 
-const watering_headerKey = 'fhyxz_watering_header'
-const watering_bodyKey = 'fhyxz_watering_body'
+const KEY_watering_url = 'fhyxz_watering_url'
+const KEY_watering_header = 'fhyxz_watering_header'
 const fhyxz = init()
 
 const requrl = $request.url
 if ($request && $request.method != 'OPTIONS') {
-	const requrl = JSON.stringify($request.headers)
-	if(requrl.match(/\/msapi\/farm-game\/mobile\/api\/gameUser\/getUserInfo/)) {
-	  //const watering_bodyVal = $request.body
+	const headers = JSON.stringify($request.headers)
+	if(requrl.match(/msapi\/farm-game\/mobile\/api\/gameUser\/getUserInfo/)) {
 	  if (requrl) fhyxz.setdata(KEY_getInfo_url, requrl)
 	  if (headers) fhyxz.setdata(KEY_getInfo_header, headers)
-	  //if (watering_bodyVal) fhyxz.setdata(watering_bodyKey, watering_bodyVal)
+	  //if ($request.body) fhyxz.setdata(watering_bodyKey, $request.body)
 	  fhyxz.msg(cookieName, `获取用户信息成功`, ``)
 	}
 	else if(requrl.match(/msapi\/farm-game\/mobile\/api\/gameUser\/seed\/watering/)) {
-	  if (requrl) fhyxz.setdata(KEY_getInfo_url, requrl)
-	  if (headers) fhyxz.setdata(KEY_getInfo_header, headers)
+	  if (requrl) fhyxz.setdata(KEY_watering_url, requrl)
+	  if (headers) fhyxz.setdata(KEY_watering_header, headers)
       fhyxz.msg(cookieName, `浇水成功`, ``)
-      fhyxz.log("浇水hearder:"+watering_headerVal);
 	}
 }
 
