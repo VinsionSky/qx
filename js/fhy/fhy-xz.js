@@ -20,7 +20,7 @@ let VAL_watering_header = chavy.getdata(KEY_watering_header)
 ;(sign = async () => {
     chavy.log(`🔔 ${cookieName}`)
     //await loginapp()
-	//await getinfo()
+	await getinfo()
     await watering()
     
     showmsg()
@@ -46,7 +46,7 @@ function loginapp() {
 
 function getinfo() {
     return new Promise((resolve, reject) => {
-        const url = { url: KEY_getInfo_url, headers: {"Cookie": JSON.parse(KEY_getInfo_header)["Cookie"]}}
+        const url = { url: KEY_getInfo_url, headers: JSON.parse(KEY_getInfo_header) }
         chavy.get(url, (error, response, data) => {
             try {
                 signinfo.info = JSON.parse(data)
