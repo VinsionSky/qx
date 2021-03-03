@@ -1,7 +1,6 @@
 const cookieName = '凤凰云小镇'
-const tokenurlKey = 'fhyxz_tokenurl'
-const tokenheaderKey = 'fhyxz_tokenheader'
-const watering_urlKey = 'fhyxz_watering_url'
+const KEY_loginurl = 'fhyxz_tokenurl'
+const KEY_loginheader = 'fhyxz_tokenheader'
 
 const KEY_getInfo_url = 'fhyxz_getInfo_url'
 const KEY_getInfo_header = 'fhyxz_getInfo_header'
@@ -14,12 +13,14 @@ const requrl = $request.url
 if ($request && $request.method != 'OPTIONS') {
 	const headers = JSON.stringify($request.headers)
 	if(requrl.match(/msapi\/farm-game\/mobile\/api\/gameUser\/getUserInfo/)) {
+       fhyxz.log('get-url:'+requrl)
 	  if (requrl) fhyxz.setdata(KEY_getInfo_url, requrl)
 	  if (headers) fhyxz.setdata(KEY_getInfo_header, headers)
 	  //if ($request.body) fhyxz.setdata(watering_bodyKey, $request.body)
 	  fhyxz.msg(cookieName, `获取用户信息成功`, ``)
 	}
 	else if(requrl.match(/msapi\/farm-game\/mobile\/api\/gameUser\/seed\/watering/)) {
+       fhyxz.log("watering"+requrl)
 	  if (requrl) fhyxz.setdata(KEY_watering_url, requrl)
 	  if (headers) fhyxz.setdata(KEY_watering_header, headers)
       fhyxz.msg(cookieName, `浇水成功`, ``)
