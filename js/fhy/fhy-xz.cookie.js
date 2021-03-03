@@ -13,10 +13,12 @@ const requrl = $request.url
 if ($request && $request.method != 'OPTIONS') {
 	const headers = JSON.stringify($request.headers)
 	if(requrl.match(/msapi\/farm-game\/mobile\/api\/gameUser\/getUserInfo/)) {
-       fhyxz.log('get-url:'+requrl)
+       
 	  if (requrl) fhyxz.setdata(KEY_getInfo_url, requrl)
 	  if (headers) fhyxz.setdata(KEY_getInfo_header, headers)
 	  //if ($request.body) fhyxz.setdata(watering_bodyKey, $request.body)
+	  fhyxz.log('gd-url:'+ fhyxz.getdata(KEY_getInfo_url))
+	  fhyxz.log('gd-headers:'+ fhyxz.getdata(KEY_getInfo_header))
 	  fhyxz.msg(cookieName, `获取用户信息成功`, ``)
 	}
 	else if(requrl.match(/msapi\/farm-game\/mobile\/api\/gameUser\/seed\/watering/)) {
