@@ -15,7 +15,7 @@ if ($request && $request.method != 'OPTIONS') {
 	if(requrl.match(/msapi\/farm-game\/mobile\/api\/gameUser\/getUserInfo/)) {
        
 	  if (requrl) {
-		  fhyxz.log('set-url')
+		  fhyxz.log('isQuanX=' + fhyxz.isQuanX() + '；isSurge=' + fhyxz.isQuanX())
 		  fhyxz.setdata(KEY_getInfo_url, requrl)
 		  fhyxz.log('gd-url:'+ fhyxz.getdata(KEY_getInfo_url))
 	  }
